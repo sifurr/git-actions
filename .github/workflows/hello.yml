@@ -1,0 +1,21 @@
+name: Print Txt file
+
+on:
+  push:
+    branches:
+      - main
+      - hello
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  read_my_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git repo checkout korun mane clone korun
+        uses: actions/checkout@v2
+      - name: Read the txt file
+        run: |
+          ls -l 
+          cat hello.txt

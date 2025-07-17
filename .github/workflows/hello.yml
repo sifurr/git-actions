@@ -10,10 +10,9 @@ on:
 
 jobs:
   read_my_file:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
-      - name: Git repo checkout korun mane clone korun
+      - name: Git repo checkout koro (checkout maane clone kora)
         uses: actions/checkout@v2
       - name: Read the txt file
-        run: |
-          ls -l
+        run: cat hello.txt
